@@ -12,10 +12,10 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getHello', () => {
+  describe('root', () => {
     it('should return "Hello World!"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getHello()).toBe('Hello World!');
+      expect(appController.root()).toEqual({ 'message': 'Hello World! (service)' });
     });
   });
 });
